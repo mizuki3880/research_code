@@ -1,0 +1,17 @@
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"usernamehw.errorlens",
+				"streetsidesoftware.code-spell-checker-spanish",
+				"oderwat.indent-rainbow",
+				"GitHub.copilot"
+			]
+		}
+	}
+}
