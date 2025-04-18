@@ -1,6 +1,7 @@
-black
-ipykernel
 numpy
 pandas
+scikit-learn
 matplotlib
-scipy
+jupyterlab
+torch
+transformers

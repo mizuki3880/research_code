@@ -1,17 +1,17 @@
 {
-	"name": "Existing Dockerfile",
+	"name": "ML Container",
 	"build": {
-		"context": "..",
-		"dockerfile": "../Dockerfile"
+	  "dockerfile": "Dockerfile",
+	  "context": ".."
 	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"usernamehw.errorlens",
-				"streetsidesoftware.code-spell-checker-spanish",
-				"oderwat.indent-rainbow",
-				"GitHub.copilot"
-			]
-		}
-	}
-}
+	"settings": {
+	  "terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+	  "ms-python.python",
+	  "ms-toolsai.jupyter"
+	],
+	"postCreateCommand": "pip install -r requirements.txt",
+	"remoteUser": "root"
+  }
+  
