@@ -1,7 +1,13 @@
+# requirements.txt  (CPU 版で OK な最小)
 numpy
 pandas
 scikit-learn
 matplotlib
-jupyterlab
-torch
+jupyterlab           # Jupyter が必要なときだけ
+torch==2.2.*         # ←★ バージョンは必ず固定
+torchvision          # DataLoader の画像 augment を使う場合
+torchaudio           # 依存解決用 (空でも OK)
 transformers
+torchsort==0.1.9     # ← SoftSort-Knapsack 用
+hydra-core           # ← configs/*.yml を楽に扱う
+PyYAML               # 同上

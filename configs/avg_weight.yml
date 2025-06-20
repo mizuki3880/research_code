@@ -1,0 +1,5 @@
+# configs/avg_weight.yml
+avg_weight:
+  AW: 0.80  # 秋冬 0.8 kg/点
+  SS: 0.35  # 春夏 0.35 kg/点
+  SA: 0.50  # 春秋 0.5 kg/点

@@ -1,17 +1,26 @@
 {
-	"name": "ML Container",
-	"build": {
-	  "dockerfile": "Dockerfile",
-	  "context": ".."
-	},
-	"settings": {
-	  "terminal.integrated.shell.linux": "/bin/bash"
-	},
-	"extensions": [
-	  "ms-python.python",
-	  "ms-toolsai.jupyter"
-	],
-	"postCreateCommand": "pip install -r requirements.txt",
-	"remoteUser": "root"
-  }
-  
+  "name": "UsedClothing-E2E (CPU)",
+  // ❶ 上で示した Dockerfile を使う
+  "build": {
+    "dockerfile": "Dockerfile",   // 同じ階層に置く
+    "context": ".."               // ルートが repo/
+  },
+
+  // ❷ ルートは /workspace にしたのでシェルはそのまま bash
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  // ❸ よく使う拡張だけを残す
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter"
+  ],
+
+  // ❹ 依存パッケージは Dockerfile 内で入れるので **不要**
+  //    ⇒ 重複インストールを避けるため削除
+  // "postCreateCommand": "pip install -r requirements.txt",
+
+  // ❺ root で問題なければそのまま。必要なら non-root へ変更
+  "remoteUser": "root"
+}
